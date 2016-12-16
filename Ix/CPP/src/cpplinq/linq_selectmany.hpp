@@ -115,6 +115,8 @@ namespace cpplinq
                     store = std::make_shared<collection_store>(fn(cur1.get()));
                     cur2 = from(store->get()).get_cursor();
                 }
+
+                thunk();
             }
 
             bool empty() const 
